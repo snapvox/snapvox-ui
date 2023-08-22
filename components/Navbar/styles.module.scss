@@ -1,0 +1,103 @@
+.light {
+  .container {
+    background-color: #fff;
+  }
+
+  .line {
+    background-color: var(--lightline);
+  }
+}
+
+.dark {
+  .container {
+    background-color: #0d1117;
+  }
+
+  .line {
+    background-color: rgba(45, 45, 45, 1);
+  }
+}
+
+.container {
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-y: hidden;
+  margin-left: 25px;
+  margin-right: 25px;
+
+  .limitedContainer {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      cursor: pointer;
+      transition: 0.4s;
+      padding-top: 10px;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    .userOptions {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .connectButton {
+        cursor: pointer;
+        padding: 10px 12px;
+        background: var(--darkblue);
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.4s;
+        overflow: hidden;
+
+        &:hover {
+          background-color: white;
+          outline: 1px solid var(--darkblue);
+          color: var(--darkblue);
+        }
+      }
+
+      .lightMode {
+        cursor: pointer;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background-color: black;
+
+        .limitWidth {
+          max-width: 20px;
+          max-height: 20px;
+          overflow-x: visible;
+        }
+      }
+
+      .darkMode {
+        cursor: pointer;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background-color: white;
+
+        .limitWidth {
+          transform: scale(1.2);
+          max-width: 20px;
+          max-height: 20px;
+          overflow-x: visible;
+        }
+      }
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+}

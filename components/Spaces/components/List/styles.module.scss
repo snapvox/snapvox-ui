@@ -1,0 +1,17 @@
+.listContainer {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  //align-items: flex-start;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  border-radius: 10px;
+  height: 70vh;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.listContainer::-webkit-scrollbar {
+  display: none;
+}

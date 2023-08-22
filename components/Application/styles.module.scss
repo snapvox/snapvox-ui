@@ -1,0 +1,42 @@
+.backgroundContainer {
+    background-color: #0d1117;
+  }
+  
+  .container {
+    z-index: 5;
+  
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .backContainer {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        color: #903EFA;
+      }
+  
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #903EFA;
+        margin-top: 40px;
+        margin-bottom: 40px;
+  
+        @media (max-width: 900px) {
+          font-size: 30px;
+        }
+      }
+  
+      iframe {
+        border: none;
+        border-radius: 10px;
+        margin: 0;
+      }
+    }
+  }
