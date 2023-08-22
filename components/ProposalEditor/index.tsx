@@ -7,10 +7,6 @@ import { NotificationManager } from "react-notifications";
 import Slider from "@mui/material/Slider";
 import "@uiw/react-markdown-preview/markdown.css";
 import "@uiw/react-md-editor/markdown-editor.css";
-import ImageInput from "./components/ImageInput";
-import ImageInputRemovable from "./components/ImageInputRemovable";
-import LinkInput from "./components/LinkInput";
-import LinkInputRemovable from "./components/LinkInputRemovable";
 
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
