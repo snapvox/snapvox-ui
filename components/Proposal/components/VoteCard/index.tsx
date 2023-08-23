@@ -1,7 +1,7 @@
 import React, { use, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
-import { BlockchainContext } from "../../../../contexts/BlockchainProvider";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
+import { BlockchainContext } from "../../../../utils/contexts/BlockchainProvider";
 import styles from "./styles.module.scss";
 
 interface IData {

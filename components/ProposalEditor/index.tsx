@@ -11,11 +11,11 @@ import "@uiw/react-md-editor/markdown-editor.css";
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 import { useRouter } from "next/router";
-import { Theme, ThemeContext } from "../../contexts/ThemeContext";
-import { PreviewContext } from "../../contexts/PreviewContext";
-import { Web3ModalContext } from "../../contexts/Web3ModalProvider";
-import { BlockchainContext } from "../../contexts/BlockchainProvider";
-import { ProposalsContext } from "../../contexts/ProposalsContext";
+import { Theme, ThemeContext } from "../../utils/contexts/ThemeContext";
+import { PreviewContext } from "../../utils/contexts/PreviewContext";
+import { Web3ModalContext } from "../../utils/contexts/Web3ModalProvider";
+import { BlockchainContext } from "../../utils/contexts/BlockchainProvider";
+import { ProposalsContext } from "../../utils/contexts/ProposalsContext";
 import { generateHexString } from "../../utils";
 import { createProposal } from "../../services/api";
 import { VotingHubAddress } from "../../blockchain/constants";

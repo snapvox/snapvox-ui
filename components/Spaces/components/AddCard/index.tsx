@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
-import { Web3ModalContext } from "../../../../contexts/Web3ModalProvider";
-import { StatusContext } from "../../../../contexts/StatusUpdater";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
+import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
+import { StatusContext } from "../../../../utils/contexts/StatusUpdater";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import plus from '../../../../public/assets/svgicons/plus.svg';

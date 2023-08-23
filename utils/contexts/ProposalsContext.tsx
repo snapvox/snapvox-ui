@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
-import type { Proposal, Tag } from "../services/api";
-import { getAllProposals, getProposal, fullTextSearch, getProposalsByTag, getProposalByContract } from "../services/api";
+import type { Proposal, Tag } from "../../services/api";
+import { getAllProposals, getProposal, fullTextSearch, getProposalsByTag, getProposalByContract } from "../../services/api";
 
 interface IProposalsContext {
     proposals: Proposal[];

@@ -1,4 +1,4 @@
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 import lightLogo from "../../../../public/assets/logo/smallLightLogo.svg";
 import Logo from "../../../../public/assets/logo/smallColorLogo.svg";
 import Discord from "../../../../public/assets/socialmedia/discord.svg";
@@ -9,9 +9,9 @@ import WhiteInstagram from "../../../../public/assets/socialmedia/whiteInstagram
 import WhiteTwitter from "../../../../public/assets/socialmedia/whiteTwitter.svg";
 import styles from "./styles.module.scss";
 import { useContext, useEffect, useState } from "react";
-import { BlockchainContext } from "../../../../contexts/BlockchainProvider";
-import { Web3ModalContext } from "../../../../contexts/Web3ModalProvider";
-import { StatusContext } from "../../../../contexts/StatusUpdater";
+import { BlockchainContext } from "../../../../utils/contexts/BlockchainProvider";
+import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
+import { StatusContext } from "../../../../utils/contexts/StatusUpdater";
 
 const About = () => {
 

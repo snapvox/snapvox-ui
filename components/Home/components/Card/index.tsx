@@ -1,14 +1,14 @@
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 import like from "../../../../public/assets/svgicons/like.svg";
 import whiteLike from "../../../../public/assets/svgicons/whiteLike.svg";
 import { ellipseAddress, getPercentage } from "../../../../utils";
 import Status, { StatusType } from "../../../reusable/Status";
-import { BlockchainContext } from "../../../../contexts/BlockchainProvider";
-import { Web3ModalContext } from "../../../../contexts/Web3ModalProvider";
-import { StatusContext } from "../../../../contexts/StatusUpdater";
+import { BlockchainContext } from "../../../../utils/contexts/BlockchainProvider";
+import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
+import { StatusContext } from "../../../../utils/contexts/StatusUpdater";
 import Timing from "../../../reusable/Timing";
 import styles from "./styles.module.scss";
 

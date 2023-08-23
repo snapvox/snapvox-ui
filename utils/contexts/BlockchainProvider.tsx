@@ -1,4 +1,4 @@
-import VotingHubWrapper from "../blockchain/VotingHubWrapper";
+import VotingHubWrapper from "../../blockchain/VotingHubWrapper";
 import { createContext, useEffect, useState, useContext } from "react";
 import { Web3ModalContext } from "./Web3ModalProvider";
 
@@ -20,7 +20,7 @@ export const BlockchainProvider = ({ children }) => {
                 setVotingHub(_votingHub);
             } catch (e) {
                 console.log(e);
-            }            
+            }
         } else {
             setVotingHub(null);
         }

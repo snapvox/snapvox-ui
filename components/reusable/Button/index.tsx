@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useContext } from "react";
-import { Theme, ThemeContext } from "../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../utils/contexts/ThemeContext";
 import styles from "./styles.module.scss";
 
 interface Button {
