@@ -12,7 +12,7 @@ import styles from "./styles.module.scss";
 import newicon from "../../../../public/assets/svgicons/new.svg";
 import search from "../../../../public/assets/svgicons/search.svg";
 import dropdownsvg from "./assets/dropdown.svg";
-import { BlockchainContext } from "../../../../contexts/BlockchainProvider";
+import { BlockchainContext } from "../../../../utils/contexts/BlockchainProvider";
 
 const Search = () => {
   const route = useRouter();
