@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <TermsPopup />
-      <ProposalComponent />
+      <ProposalComponent href={undefined} />
     </>
   );
 }
