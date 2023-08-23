@@ -31,6 +31,7 @@ export const createProposal = async (proposal: Proposal) => {
         method: 'post',
         url: `${API_URL}/proposal`,
         headers: {
+            'ngrok-skip-browser-warning': '69420',
             'Access-Control-Allow-Origin': '*',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -51,6 +52,7 @@ export const getAllProposals = async () => {
         method: 'get',
         url: `${API_URL}/proposal/all`,
         headers: {
+            'ngrok-skip-browser-warning': '69420',
             'Access-Control-Allow-Origin': '*',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -70,6 +72,7 @@ export const getProposal = async (id: number) => {
         method: 'get',
         url: `${API_URL}/proposal/id/${id}`,
         headers: {
+            'ngrok-skip-browser-warning': '69420',
             'Access-Control-Allow-Origin': '*',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -89,6 +92,7 @@ export const fullTextSearch = async (query: string) => {
         method: 'get',
         url: `${API_URL}/proposal/search/${query}`,
         headers: {
+            'ngrok-skip-browser-warning': '69420',
             'Access-Control-Allow-Origin': '*',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -109,6 +113,7 @@ export const getProposalsByTag = async (tag: string) => {
         method: 'get',
         url: `${API_URL}/proposal/tags/${tag}`,
         headers: {
+            'ngrok-skip-browser-warning': '69420',
             'Access-Control-Allow-Origin': '*',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -129,6 +134,7 @@ export const getProposalByContract = async (contract: string) => {
         method: 'get',
         url: `${API_URL}/proposal/contract/${contract}`,
         headers: {
+            'ngrok-skip-browser-warning': '69420',
             'Access-Control-Allow-Origin': '*',
             'Accept': 'application/json',
             'Content-Type': 'application/json',
