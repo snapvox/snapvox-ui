@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 import invertedShare from "../../../../public/assets/svgicons/invertedShare.svg";
 import { ellipseAddress } from "../../../../utils";
 

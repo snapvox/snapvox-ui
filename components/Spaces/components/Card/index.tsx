@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
-import { Web3ModalContext } from "../../../../contexts/Web3ModalProvider";
-import { StatusContext } from "../../../../contexts/StatusUpdater";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
+import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
+import { StatusContext } from "../../../../utils/contexts/StatusUpdater";
 import { NotificationManager } from 'react-notifications'
 import verified from '../../../../public/assets/svgicons/verified.svg';
 import styles from "./styles.module.scss";
@@ -65,7 +65,6 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
           <div className={styles.title}>{props.title} {props.isVerified ? (<Image src={verified} alt='Verified' width={20} height={20} />) : (<></>)}</div>
           <div className={styles.description}> {props.description} </div>
         </div>
-        
       </div>
     </div>
   );

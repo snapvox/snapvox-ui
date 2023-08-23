@@ -2,14 +2,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useCallback, useContext } from "react";
 
-import { Theme, ThemeContext } from "../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../utils/contexts/ThemeContext";
 
 import moon from "../../public/assets/darkmode/moon.svg";
 import sun from "../../public/assets/lightmode/sun.svg";
 import logo from "../../public/assets/logo/votinglogo.svg";
 
-import { PopupContext } from "../../contexts/PopupContext";
-import { Web3ModalContext } from "../../contexts/Web3ModalProvider";
+import { PopupContext } from "../../utils/contexts/PopupContext";
+import { Web3ModalContext } from "../../utils/contexts/Web3ModalProvider";
 import { ellipseAddress } from "../../utils";
 import styles from "./styles.module.scss";
 

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 import backArrow from "../../../../public/assets/svgicons/backArrow.svg";
 import styles from "./styles.module.scss";
 import { useRouter } from "next/router";

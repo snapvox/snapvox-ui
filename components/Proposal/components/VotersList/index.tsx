@@ -1,10 +1,10 @@
 import { useContext, useState, useEffect } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 import UserRow from "./components/UserRow";
 import VotersPopup from "./components/VotersPopup";
 import styles from "./styles.module.scss";
-import { Web3ModalContext } from "../../../../contexts/Web3ModalProvider";
-import { StatusContext } from "../../../../contexts/StatusUpdater";
+import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
+import { StatusContext } from "../../../../utils/contexts/StatusUpdater";
 import { VotingHubAddress, DeploymentBlock } from "../../../../blockchain/constants";
 import { RpcEndpoint } from "../../../../blockchain/constants";
 import { fetchVotes } from "../../../../utils";

@@ -28,16 +28,16 @@
       margin-top: 25px;
 
       .left {
-        width: 780px;
-        margin-top: -19px;
-      }
-
-      .right {
+        width: 320px;
         display: flex;
         flex-direction: column;
         justify-items: center;
-        gap: 0px;
-        width: 320px;
+        gap: 20px;
+      }
+
+      .right {
+        width: 780px;
+        margin-top: -19px;
       }
     }
   }

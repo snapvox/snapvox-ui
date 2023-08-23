@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { KeyboardEvent, useContext, useState } from "react";
-import { Theme, ThemeContext } from "../../../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 
-import { ProposalsContext } from "../../../../contexts/ProposalsContext";
-import { Web3ModalContext } from "../../../../contexts/Web3ModalProvider";
+import { ProposalsContext } from "../../../../utils/contexts/ProposalsContext";
+import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
 import Button from "../../../reusable/Button";
 
 import styles from "./styles.module.scss";

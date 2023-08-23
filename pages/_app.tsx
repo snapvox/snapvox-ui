@@ -1,16 +1,17 @@
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import "semantic-ui-css/semantic.min.css";
-import BlockchainProvider from "../contexts/BlockchainProvider";
-import { PopupContext } from "../contexts/PopupContext";
-import ProposalsProvider from "../contexts/ProposalsContext";
-import StatusUpdater from "../contexts/StatusUpdater";
-import { Theme, ThemeContext } from "../contexts/ThemeContext";
+import BlockchainProvider from "../utils/contexts/BlockchainProvider";
+import { PopupContext } from "../utils/contexts/PopupContext";
+import ProposalsProvider from "../utils/contexts/ProposalsContext";
+import StatusUpdater from "../utils/contexts/StatusUpdater";
+import { Theme, ThemeContext } from "../utils/contexts/ThemeContext";
 import { NotificationContainer } from "react-notifications";
 import 'react-notifications/lib/notifications.css';
-import Web3ModalProvider from "../contexts/Web3ModalProvider";
+import Web3ModalProvider from "../utils/contexts/Web3ModalProvider";
 import "../styles/globals.scss";
-import PreviewProvider, { PreviewContext } from "../contexts/PreviewContext";
+import PreviewProvider, { PreviewContext } from "../utils/contexts/PreviewContext";
+import { SpaceProvider } from "../utils/contexts/SpaceContext";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [popup, setPopup] = useState(false);
@@ -32,7 +33,9 @@ export default function App({ Component, pageProps }: AppProps) {
             <ProposalsProvider>
               <StatusUpdater>
                 <PreviewProvider>
-                  <Component {...pageProps} />
+                  <SpaceProvider>
+                    <Component {...pageProps} />
+                  </SpaceProvider>
                 </PreviewProvider>
                 <NotificationContainer />
               </StatusUpdater>

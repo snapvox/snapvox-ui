@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import Card from "../Card";
 import styles from "./styles.module.scss";
-import { ProposalsContext } from "../../../../contexts/ProposalsContext";
+import { ProposalsContext } from "../../../../utils/contexts/ProposalsContext";
 
 const List = () => {
   const [data, setData] = useState<any>([]);

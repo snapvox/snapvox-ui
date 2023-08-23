@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Theme, ThemeContext } from "../../contexts/ThemeContext";
+import { Theme, ThemeContext } from "../../utils/contexts/ThemeContext";
 import List from "./components/List";
 import Search from "./components/Search";
 import styles from "./styles.module.scss";

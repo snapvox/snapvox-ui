@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useCallback, useContext, useState } from "react";
-import { PopupContext } from "../../contexts/PopupContext";
-import { Web3ModalContext } from "../../contexts/Web3ModalProvider";
+import { PopupContext } from "../../utils/contexts/PopupContext";
+import { Web3ModalContext } from "../../utils/contexts/Web3ModalProvider";
 import close from "../../public/assets/svgicons/close.svg";
 import styles from "./styles.module.scss";
 
