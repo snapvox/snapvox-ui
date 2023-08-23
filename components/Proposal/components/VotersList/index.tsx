@@ -25,7 +25,7 @@ const VotersList = (id : any) => {
   useEffect(() => {
     if (!chainId || !account) return;
     try {
-      fetchVotes(id.id, VotingHubAddress.Networks[chainId], RpcEndpoint.Networks[chainId], DeploymentBlock.Networks[chainId]).then(setUsers)
+      fetchVotes(id.id, VotingHubAddress.Networks[chainId]['SNAPVOX'], RpcEndpoint.Networks[chainId], DeploymentBlock.Networks[chainId]['SNAPVOX']).then(setUsers)
     } catch (e) {
       console.log(e)
     }

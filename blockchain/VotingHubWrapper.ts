@@ -17,8 +17,8 @@ export default class VotingHubWrapper {
         this.wrapperOptions = {
             web3, chainId, account, ...options
         };
-
-        this.Contract = new VotingHubV1(this.wrapperOptions, VotingHubAddress.Networks[chainId]);
+        
+        this.Contract = new VotingHubV1(this.wrapperOptions, VotingHubAddress.Networks[chainId]['SNAPVOX']);
     }
 
     async totalTollBurned() {
@@ -97,6 +97,15 @@ export default class VotingHubWrapper {
     async propose(description, opensAt, closesAt, votingToll, passingPerc, uniqueHash) {
         try{
             const result = await this.Contract.send("propose", {from: this.account}, description, opensAt, closesAt, votingToll, passingPerc, uniqueHash);
+            return result;
+        } catch (e) {
+            throw e;
+        }
+    }
+
+    async isAuthorized(address) {
+        try{
+            const result = await this.Contract.call("isAuthorized", address);
             return result;
         } catch (e) {
             throw e;

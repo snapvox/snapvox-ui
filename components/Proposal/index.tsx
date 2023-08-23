@@ -75,7 +75,7 @@ const ProposalComponent = ({href}) => {
         title: title,
         tags: tags,
         description: value,
-        contract: VotingHubAddress.Networks[chainId],
+        contract: VotingHubAddress.Networks[chainId]['SNAPVOX'],
       })
       return
     }

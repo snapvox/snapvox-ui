@@ -49,21 +49,21 @@ const VoteCard: React.FC<IData> = (props: IData) => {
               onClick={() => {
                 votingHub?.castVote(route.query.id as string, 1, props.data.toll).then(() => {
                   setJustVoted(true);
-                  route.push("/");
+                  route.push("/proposals");
                 });
               }}>Yes</div>
             <div className={styles.no}
               onClick={() => {
                 votingHub?.castVote(route.query.id as string, 0, props.data.toll).then(() => {
                   setJustVoted(true);
-                  route.push("/");
+                  route.push("/proposals");
                 });
               }}>No</div>
             <div className={styles.abstain}
               onClick={() => {
                 votingHub?.abstainVote(route.query.id as string, props.data.toll).then(() => {
                   setJustVoted(true);
-                  route.push("/");
+                  route.push("/proposals");
                 });
               }}>Abstain</div>
           </div>

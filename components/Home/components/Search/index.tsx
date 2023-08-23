@@ -12,6 +12,7 @@ import styles from "./styles.module.scss";
 import newicon from "../../../../public/assets/svgicons/new.svg";
 import search from "../../../../public/assets/svgicons/search.svg";
 import dropdownsvg from "./assets/dropdown.svg";
+import { BlockchainContext } from "../../../../contexts/BlockchainProvider";
 
 const Search = () => {
   const route = useRouter();
@@ -19,6 +20,7 @@ const Search = () => {
   const { query, all, byTag } = useContext(ProposalsContext);
   const { account } = useContext(Web3ModalContext);
   const { theme } = useContext(ThemeContext);
+  const { votingHub } = useContext(BlockchainContext);
 
   const [dropdown, setDropdown] = useState(false);
   const [tag, setTag] = useState("All");

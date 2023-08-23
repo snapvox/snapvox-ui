@@ -148,7 +148,7 @@ const ProposalEditorComponent = () => {
                           proposal: nextProposal,
                           tags: tags,
                           description: value,
-                          contract: VotingHubAddress.Networks[chainId],
+                          contract: VotingHubAddress.Networks[chainId]['SNAPVOX'],
                           creator: account,
                           created: (Date.now()/1000).toString(),
                           opens: (Date.parse(startDate)/1000).toString(),

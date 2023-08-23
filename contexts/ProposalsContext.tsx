@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import type { Proposal, Tag } from "../services/api";
-import { getAllProposals, getProposal, fullTextSearch, getProposalsByTag } from "../services/api";
+import { getAllProposals, getProposal, fullTextSearch, getProposalsByTag, getProposalByContract } from "../services/api";
 
 interface IProposalsContext {
     proposals: Proposal[];
@@ -9,6 +9,7 @@ interface IProposalsContext {
     byId(id: number): any;
     byTag(tag: Tag): any;
     all(): any;
+    byContract(contract: string): any;
     loading: boolean;
 }
 
@@ -79,8 +80,24 @@ const ProposalsProvider = ({ children }) => {
         setLoading(false);
     }
 
+    const byContract = async (contract: string) => {
+        setLoading(true);
+        await getProposalByContract(contract).then(
+            (result) => {
+                result?.data.sort((a, b) => b.proposal - a.proposal);
+                setProposals(result?.data);
+            }
+        ).catch(
+            (error) => {
+                console.log(error);
+            }
+        );
+        setLoading(false);
+    }
+
+
     return (
-        <ProposalsContext.Provider value={{ proposals, current, query, byId, all, byTag, loading }}>
+        <ProposalsContext.Provider value={{ proposals, current, query, byId, all, byTag, byContract, loading }}>
             {children}
         </ProposalsContext.Provider>
     )

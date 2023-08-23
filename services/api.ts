@@ -118,4 +118,24 @@ export const getProposalsByTag = async (tag: string) => {
     }
 }
 
+export const getProposalByContract = async (contract: string) => {
+
+    const config = {
+        method: 'get',
+        url: `${API_URL}/proposal/contract/${contract}`,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+    }
+
+    try {
+        const response = await axios(config)
+        return response
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 
