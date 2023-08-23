@@ -8,6 +8,7 @@ interface IProposalsContext {
     query(query: string): any;
     byId(id: number): any;
     byTag(tag: Tag): any;
+    clear(): any;
     all(): any;
     byContract(contract: string): any;
     loading: boolean;
@@ -95,9 +96,13 @@ const ProposalsProvider = ({ children }) => {
         setLoading(false);
     }
 
+    const clear = () => {
+        setProposals([]);
+    }
+
 
     return (
-        <ProposalsContext.Provider value={{ proposals, current, query, byId, all, byTag, byContract, loading }}>
+        <ProposalsContext.Provider value={{ proposals, current, query, byId, all, byTag, byContract, clear, loading }}>
             {children}
         </ProposalsContext.Provider>
     )

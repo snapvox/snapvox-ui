@@ -32,20 +32,21 @@ const Card: React.FC<CardProps> = (props: CardProps) => {
   }, [web3, account])
 
   const handleClick = () => {
-/*     if (!account) { // CHECA SE TEM METAMASK
+    if (!account) {
       NotificationManager.error('Please connect your wallet to continue', 'Error', 5000);
       return;
     }
 
-    if ((chainId != 50 && chainId != 51)) { // CHECA SE TA NA XDC
+    if ((chainId != 50 && chainId != 51)) {
       NotificationManager.error('Please switch to XDC Network to continue', 'Error', 5000);
       return;
     }
 
-    if (!props.isActive) { // DISABILITA O XDC COMMUNITY
+    if (!props.isActive) {
       NotificationManager.info('This space is coming soon! Please keep tuned.', 'info', 5000);
       return;
-    } */
+    }
+
     route.push(`/proposals`);
 
   }

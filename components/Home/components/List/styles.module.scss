@@ -1,11 +1,12 @@
 .listContainer {
   width: 100%;
-  max-width: 750px;
+  max-width: 850px;
   display: flex;
   //align-items: flex-start;
   flex-direction: column-reverse;
   justify-content: flex-end;
   border-radius: 10px;
+  padding-left: 20px;
   height: 70vh;
   overflow-y: auto;
   -ms-overflow-style: none;

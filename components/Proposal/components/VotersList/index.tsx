@@ -8,6 +8,7 @@ import { StatusContext } from "../../../../utils/contexts/StatusUpdater";
 import { VotingHubAddress, DeploymentBlock } from "../../../../blockchain/constants";
 import { RpcEndpoint } from "../../../../blockchain/constants";
 import { fetchVotes } from "../../../../utils";
+import { useSpaceContext } from "../../../../utils/contexts/SpaceContext";
 
 const VotersList = (id : any) => {
   const { account, chainId } = useContext(Web3ModalContext);
@@ -16,6 +17,7 @@ const VotersList = (id : any) => {
   const [active, setActive] = useState(false);
   const [offset, setOffset] = useState(0);
   const [users, setUsers] = useState<any>([]);
+  const { spaceType } = useSpaceContext();
 
   useEffect(() => {
     if (!chainId || !account) return;
@@ -25,7 +27,7 @@ const VotersList = (id : any) => {
   useEffect(() => {
     if (!chainId || !account) return;
     try {
-      fetchVotes(id.id, VotingHubAddress.Networks[chainId]['SNAPVOX'], RpcEndpoint.Networks[chainId], DeploymentBlock.Networks[chainId]['SNAPVOX']).then(setUsers)
+      fetchVotes(id.id, VotingHubAddress.Networks[chainId][spaceType], RpcEndpoint.Networks[chainId], DeploymentBlock.Networks[chainId][spaceType]).then(setUsers)
     } catch (e) {
       console.log(e)
     }

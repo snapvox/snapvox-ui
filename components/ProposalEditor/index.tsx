@@ -27,6 +27,7 @@ import rotatingArrow from "./assets/rotatingarrow.svg";
 import more from "./assets/more.svg";
 import preview from "./assets/preview.svg";
 import publish from "./assets/publish.svg";
+import { useSpaceContext } from "../../utils/contexts/SpaceContext";
 
 const ProposalEditorComponent = () => {
   const { theme } = useContext(ThemeContext);
@@ -36,6 +37,7 @@ const ProposalEditorComponent = () => {
   const { account, chainId } = useContext(Web3ModalContext);
   const { votingHub } = useContext(BlockchainContext);
   const { all } = useContext(ProposalsContext);
+  const { spaceType } = useSpaceContext();
 
   const [renderNumberLink, setRenderNumberLink] = useState(0);
   const [renderNumberImage, setRenderNumberImage] = useState(0);
@@ -148,7 +150,7 @@ const ProposalEditorComponent = () => {
                           proposal: nextProposal,
                           tags: tags,
                           description: value,
-                          contract: VotingHubAddress.Networks[chainId]['SNAPVOX'],
+                          contract: VotingHubAddress.Networks[chainId][spaceType],
                           creator: account,
                           created: (Date.now()/1000).toString(),
                           opens: (Date.parse(startDate)/1000).toString(),

@@ -26,6 +26,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
+import { useSpaceContext } from "../../utils/contexts/SpaceContext";
 
 interface Votes {
   yes: number;
@@ -54,7 +55,8 @@ const ProposalComponent = ({href}) => {
   const { account, chainId, web3 } = useContext(Web3ModalContext);
   const [ receipt, setReceipt ] = useState<any>([]);
   const [ inChainData, setInChainData ] = useState<any>([]);
-  const  [passingPercentage, setPassingPercentage ] = useState<number>(0);
+  const { spaceType } = useSpaceContext();
+  const [passingPercentage, setPassingPercentage ] = useState<number>(0);
 
   const id = parseInt(route.asPath.split("/")[2]);
   const isPreview = route.pathname === "/preview";
@@ -75,7 +77,7 @@ const ProposalComponent = ({href}) => {
         title: title,
         tags: tags,
         description: value,
-        contract: VotingHubAddress.Networks[chainId]['SNAPVOX'],
+        contract: VotingHubAddress.Networks[chainId][spaceType],
       })
       return
     }

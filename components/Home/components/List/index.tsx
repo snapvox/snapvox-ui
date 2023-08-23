@@ -4,17 +4,20 @@ import styles from "./styles.module.scss";
 import { ProposalsContext } from "../../../../utils/contexts/ProposalsContext";
 import { VotingHubAddress } from "../../../../blockchain/constants";
 import { Web3ModalContext } from "../../../../utils/contexts/Web3ModalProvider";
+import { useSpaceContext } from "../../../../utils/contexts/SpaceContext";
 
 const List = () => {
   const [data, setData] = useState<any>([]);
-  const { proposals, byId, byContract } = useContext(ProposalsContext);
+  const { proposals, byId, byContract, clear } = useContext(ProposalsContext);
   const { chainId } = useContext(Web3ModalContext);
+  const { spaceType } = useSpaceContext();
 
   useEffect(() => {
     if(!chainId) return;
-    if(proposals && proposals.length === 0) {
+    if(proposals?.length === 0) {
       const getData = async () => {
-        await byContract(VotingHubAddress.Networks[chainId]['SNAPVOX']);
+        console.log(spaceType)
+        await byContract(VotingHubAddress.Networks[chainId][spaceType]);
       };
       getData();
     }

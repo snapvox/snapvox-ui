@@ -3,7 +3,7 @@ import { Theme, ThemeContext } from "../../../../utils/contexts/ThemeContext";
 import backArrow from "../../../../public/assets/svgicons/backArrow.svg";
 import styles from "./styles.module.scss";
 import { useRouter } from "next/router";
-
+import ProposalsContext from "../../../../utils/contexts/ProposalsContext";
 
 const Return = () => {
   const { theme } = useContext(ThemeContext);
