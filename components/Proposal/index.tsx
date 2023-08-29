@@ -24,7 +24,9 @@ import styles from "./styles.module.scss";
 import ReactMarkdown from "react-markdown";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import rehypeRaw from "rehype-raw";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import atomDark from "../../styles/atom-dark.js";
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
 import { useSpaceContext } from "../../utils/contexts/SpaceContext";
 
@@ -244,6 +246,7 @@ const ProposalComponent = ({href}) => {
                               children={String(children).replace(/\n$/, '')}
                               language={match[1]}
                               PreTag="div"
+                              style={atomDark}
                               {...props}
                             />
                           ) : (
@@ -254,7 +257,7 @@ const ProposalComponent = ({href}) => {
                         }
                       }}
                       remarkPlugins={[remarkMath]}
-                      rehypePlugins={[rehypeKatex]}
+                      rehypePlugins={[rehypeKatex, rehypeRaw]}
                     >
                       {data?.description}
                     </ReactMarkdown>

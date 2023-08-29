@@ -273,6 +273,7 @@
         text-align: justify;
         flex-direction: column;
         max-width: 720px;
+        overflow: auto;
 
         .links {
           display: flex;
