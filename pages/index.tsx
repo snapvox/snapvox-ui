@@ -1,11 +1,8 @@
 import Head from "next/head";
 
-import HomeComponent from "../components/Home";
-import SpacesComponent from "../components/Spaces";
-import Navbar from "../components/Navbar";
-import TermsPopup from "../components/TermsPopup";
+import Hero from "../components/Hero";
 
-export default function Home() {
+export default function Home () {
   return (
     <>
       <Head>
@@ -13,9 +10,7 @@ export default function Home() {
         <meta charSet="utf-8" />
       </Head>
 
-      <Navbar />
-      <TermsPopup />
-      <SpacesComponent />
+      <Hero />
     </>
-  );
+  )
 }

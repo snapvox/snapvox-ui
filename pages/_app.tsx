@@ -12,10 +12,18 @@ import Web3ModalProvider from "../utils/contexts/Web3ModalProvider";
 import "../styles/globals.scss";
 import PreviewProvider, { PreviewContext } from "../utils/contexts/PreviewContext";
 import { SpaceProvider } from "../utils/contexts/SpaceContext";
+import PreLoader from "../components/PreLoader";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [popup, setPopup] = useState(false);
   const [theme, setTheme] = useState(Theme.DARK);
+
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    // eslint-disable-next-line semi
+    setTimeout(() => {setLoading(true);}, 1700)
+  }, [])
 
   useEffect(() => {
     if (theme === Theme.DARK) {
@@ -34,6 +42,9 @@ export default function App({ Component, pageProps }: AppProps) {
               <StatusUpdater>
                 <PreviewProvider>
                   <SpaceProvider>
+                    {!loading ? (
+                      <PreLoader />
+                    ) : null}
                     <Component {...pageProps} />
                   </SpaceProvider>
                 </PreviewProvider>
