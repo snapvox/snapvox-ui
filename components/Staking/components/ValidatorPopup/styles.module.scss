@@ -1,0 +1,313 @@
+.screenContainerOpen {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(19, 19, 19);
+
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .close {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .description {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: rgba(246, 246, 246, 0.75);
+    }
+
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+
+      .infoRow {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: rgba(246, 246, 246, 0.50);
+      }
+    }
+
+    .stateButtons {
+      display: flex;
+      gap: 15px;
+
+      .disabledButton {
+        width: 115px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid #9747FF;
+        }
+      }
+
+      .activeButton {
+        width: 115px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #9747FF;
+        border-radius: 8px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .delegateStatesContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .delegateContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .inputContainer {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          border-radius: 10px;
+          background: #1a1a1a;
+          align-items: center;
+
+          :is(input) {
+            width: 85%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            outline: none;
+            border: none;
+            font-family: Consolas;
+            padding-left: 20px;
+            color: #9747FF;
+            background: #1a1a1a;
+          }
+
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0; /* Remova qualquer margem que possa ser aplicada */
+          }
+
+          .max {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #9747FF;
+            border-radius: 5px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .checkboxContainer {
+          display: flex;
+          gap: 12px;
+
+          input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #9747FF;
+            border-radius: 4px;
+          }
+
+          input[type="checkbox"]:checked {
+            background-color: #9747FF;
+          }
+
+          .text {
+            width: 350px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+
+      .undelegateContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .inputContainer {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          border-radius: 10px;
+          background: #1a1a1a;
+          align-items: center;
+
+          :is(input) {
+            width: 85%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            outline: none;
+            border: none;
+            font-family: Consolas;
+            padding-left: 20px;
+            color: #9747FF;
+            background: #1a1a1a;
+          }
+
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0; /* Remova qualquer margem que possa ser aplicada */
+          }
+
+          .max {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #9747FF;
+            border-radius: 5px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .redelegateContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .inputContainer {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          border-radius: 10px;
+          background: #1a1a1a;
+          align-items: center;
+
+          :is(input) {
+            width: 85%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            outline: none;
+            border: none;
+            font-family: Consolas;
+            padding-left: 20px;
+            color: #9747FF;
+            background: #1a1a1a;
+          }
+
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0; /* Remova qualquer margem que possa ser aplicada */
+          }
+
+          .max {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #9747FF;
+            border-radius: 5px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .confirmButtons {
+      width: 100%;
+
+      .button {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid #9747FF;
+        transition: 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          background: #9747FF;
+          color: white;
+        }
+      }
+    }
+
+    .warning {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: #FF6969;
+      text-align: center;
+      font-family: Consolas;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.screenContainerClosed {
+  display: none;
+}
