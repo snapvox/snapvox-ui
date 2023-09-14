@@ -15,20 +15,25 @@
 
       span {
         color: white;
+        transition: 0.3s;
+
+        &:hover {
+          color: #903EFA;
+        }
       }
 
       .dropdown {
-        background-color: #0d1117;
+        background: rgba(19, 19, 19, 0.80);
         border-color: rgba(45, 45, 45, 1) !important;
 
         .optionsColumn {
-          background-color: #0d1117;
+          background: rgba(19, 19, 19, 0.80);
 
           .option {
-            background-color: #0d1117;
+            background: rgba(19, 19, 19, 0.80);
 
             &:hover {
-              background-color: #0d1117;
+              color: #903EFA;
             }
           }
         }
@@ -48,9 +53,9 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    border: 1px solid var(--lightline);
     border-radius: 10px;
     height: 50px;
+    background: rgba(19, 19, 19, 0.80);
 
     .input {
       width: 100%;
@@ -94,11 +99,11 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    border: 1px solid var(--lightline);
     border-radius: 10px;
     padding: 16px;
     font-size: 16px;
     height: 50px;
+    background: rgba(19, 19, 19, 0.80);
 
     .label {
       span {
@@ -115,8 +120,8 @@
       border-radius: 10px;
       margin-top: 245px;
       margin-left: -17px;
-      background: white;
-      padding: 10px;
+      padding: 10px 10px;
+      background: rgba(19, 19, 19, 0.80);
 
       :first-child {
         margin-top: -10px;
@@ -128,7 +133,7 @@
         transition: 0.1s;
 
         &:hover {
-          filter: contrast(100);
+          color: #903EFA;
         }
       }
     }

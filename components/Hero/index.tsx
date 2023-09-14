@@ -19,11 +19,11 @@ const Hero = () => {
         </div>
 
         <div className={styles.buttonsContainer}>
-          <div className={styles.button}>
+          <div className={styles.button} onClick={() => window.open('/spaces', '_self')}>
             Vote Spaces
           </div>
 
-          <div className={styles.button}>
+          <div className={styles.button} onClick={() => window.open('/staking', '_self')}>
             Staking
           </div>
         </div>

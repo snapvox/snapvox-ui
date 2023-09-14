@@ -1,0 +1,162 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #1C1C1C;
+  background-image: url('../../public/assets/background.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+
+  .navbar {
+    z-index: 10;
+  }
+
+  .contentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
+
+    .alternateInput {
+      width: 420px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      background: rgba(19, 19, 19, 0.80);
+      border-radius: 10px;
+
+      .activeOption {
+        display: flex;
+        justify-content: center;
+        width: 180px;
+        background: #9747FF;
+        border-radius: 10px;
+        padding: 10px 0px;
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        animation: transparency 0.5s ease-in;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .inactiveOption {
+        display: flex;
+        justify-content: center;
+        width: 180px;
+        border-radius: 10px;
+        padding: 10px 0px;
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        transition: 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid #903EFA;
+        }
+      }
+    }
+
+    .myStakingContainer {
+      width: 800px;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      margin-top: 20px;
+      background: rgba(19, 19, 19, 0.80);
+      border-radius: 10px;
+
+      .left {
+        display: flex;
+
+        .infoCard {
+          width: 140px;
+          border-right: 1px solid #903EFA;
+          margin-left: 20px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+          
+          .title {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: rgba(246, 246, 246, 0.60);
+          }
+
+          .info {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+
+        .button {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          background: #9747FF;
+          padding: 10px 20px;
+          border-radius: 10px;
+          transition: 0.3s;
+
+          &:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+          }
+        }
+      }
+    }
+
+    .allValidatorsContainer {
+      width: 860px;
+      margin-top: 20px;
+
+      .filterContainer {
+
+      }
+
+      .validators {
+        width: 100%;
+        height: 60vh;
+        scroll-behavior: auto;
+        overflow-y: scroll;
+      }
+    }
+  }
+}
+
+@keyframes transparency {
+  0% {
+    background: none;
+  }
+
+  100% {
+    background: #9747FF;
+  }
+}

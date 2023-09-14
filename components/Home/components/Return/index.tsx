@@ -11,7 +11,7 @@ const Return = () => {
 
   return (
     <div className={theme == Theme.DARK ? styles.dark : styles.light}>
-      <div className={styles.container} onClick={() => route.push('/')}>
+      <div className={styles.container} onClick={() => route.push('/spaces')}>
         <div className={styles.left}>
           <span>Go Back to Spaces</span>
         </div>

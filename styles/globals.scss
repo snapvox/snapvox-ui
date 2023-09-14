@@ -3,7 +3,7 @@
 :root {
   --lightblue: #2356DF;
   --darkblue: #903EFA;
-  --darkbackground: #0d1117;
+  --darkbackground: #1C1C1C;
   --darkline: #2d2d2d;
   --lightline: #D9D9D9;
   --purple: #9747FF;
@@ -13,7 +13,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Recursive, Lato,'Helvetica Neue';
+  font-family: Consolas;
 }
 
 a {
