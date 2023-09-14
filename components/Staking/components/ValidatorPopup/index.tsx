@@ -4,9 +4,11 @@ import { useState } from 'react'
 import styles from './styles.module.scss'
 
 import close from '../../../../public/assets/svgicons/close.svg'
+import downarrow from '../../../../public/assets/svgicons/pdownarrow.svg'
 
 const ValidatorPopup = ({ isOpen, onClose }) => {
   const [buttonState, setButtonState] = useState('delegate')
+  const [dropdown, setDropdown] = useState(false)
 
   return (
     <div className={isOpen ? styles.screenContainerOpen : styles.screenContainerClosed}>
@@ -102,6 +104,32 @@ const ValidatorPopup = ({ isOpen, onClose }) => {
             </div>
           : buttonState == 'redelegate' ?
             <div className={styles.redelegateContainer}>
+              <div className={styles.dropdownContainer} onClick={() => setDropdown(!dropdown)}>
+                <div className={styles.text}>
+                  Choose a validator
+                </div>
+
+                <div className={styles.arrow}>
+                  <Image src={downarrow} alt='Arrow' />
+                </div>
+
+                {dropdown == true ?
+                  <div className={styles.optionsContainer}>
+                    <div className={styles.option} onClick={() => setDropdown(false)}>
+                      Placeholder
+                    </div>
+
+                    <div className={styles.option} onClick={() => setDropdown(false)}>
+                      Placeholder
+                    </div>
+
+                    <div className={styles.option} onClick={() => setDropdown(false)}>
+                      Placeholder
+                    </div>
+                  </div>
+                : null}
+              </div>
+
               <div className={styles.inputContainer}>
                 <input type="number" min={0} placeholder='Enter Amount' />
 
